@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74AD351F-B929-4A7D-828F-ADBFE8D271A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MC</RootNamespace>
+    <AssemblyName>MCDRI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox, Version=2.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.0.40, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Numerics, Version=1.4.0.0, Culture=neutral, PublicKeyToken=67d25c65a6631347, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Meta.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Scripting, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.0.20, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\ctrlDesign\ctrlDesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctrlDesign\ctrlDesign.Designer.cs">
+      <DependentUpon>ctrlDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ctrlImport\ctrlImport.Conversions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctrlImport\ctrlImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctrlImport\ctrlImport.Designer.cs">
+      <DependentUpon>ctrlImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ctrlImport\ctrlImport.Gui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctrlImport\ctrlImport.Mouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctrlResults\ctrlResults.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctrlResults\ctrlResults.Designer.cs">
+      <DependentUpon>ctrlResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ctrlResults.Export.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ctrlResults\ctrlResults.DrawGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCalibrationResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCalibrationResults.Designer.cs">
+      <DependentUpon>frmCalibrationResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChooseNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChooseNumber.Designer.cs">
+      <DependentUpon>frmChooseNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditItemSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditItemSet.Designer.cs">
+      <DependentUpon>frmEditItemSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImageShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImageShow.Designer.cs">
+      <DependentUpon>frmImageShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProcessing.Designer.cs">
+      <DependentUpon>frmProcessing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmScript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmScript.Designer.cs">
+      <DependentUpon>frmScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSetWeights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetWeights.Designer.cs">
+      <DependentUpon>frmSetWeights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MultiLineStringEditor.cs" />
+    <Compile Include="Graphical\BarCode.cs" />
+    <Compile Include="Graphical\CheckImage.cs" />
+    <Compile Include="Graphical\ProcessingImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IO\SerializableImageBox.cs" />
+    <Compile Include="IO\SerializableItemSet.cs" />
+    <Compile Include="IO\SerializableTestElement.cs" />
+    <Compile Include="IO\SerializableTextBox.cs" />
+    <Compile Include="Design\TestElement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\PropertyViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\PropertyViewer.Designer.cs">
+      <DependentUpon>PropertyViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphical\Calibration.cs" />
+    <Compile Include="Graphical\ColorDistribution.cs" />
+    <Compile Include="Other\CustomToolStripRenderer.cs" />
+    <Compile Include="Other\DropOutStack.cs" />
+    <Compile Include="Other\Fraction.cs" />
+    <Compile Include="Other\Logger.cs" />
+    <Compile Include="Other\UserSettings.cs" />
+    <Compile Include="Python\PythonCode.cs" />
+    <Compile Include="Python\PythonInterpreter.cs" />
+    <Compile Include="Other\StringTools.cs" />
+    <Compile Include="Design\ImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\ItemSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PaperTools\PaperDimensions.cs" />
+    <Compile Include="PaperTools\PaperOrientation.cs" />
+    <Compile Include="PaperTools\PaperCollection.cs" />
+    <Compile Include="Other\Settings.cs" />
+    <Compile Include="PaperTools\PaperTemplate.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Python\PythonVariable.cs" />
+    <Compile Include="Testing\CorrectedPage.cs" />
+    <Compile Include="Testing\CorrectedSubject.cs" />
+    <Compile Include="Testing\Item.cs" />
+    <Compile Include="PaperTools\Paper.cs" />
+    <Compile Include="Other\PdfBuilder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Graphical\EllipticalFit.cs" />
+    <Compile Include="Graphical\Processing.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Design\Page.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IO\SerializablePage.cs" />
+    <Compile Include="Testing\ItemCollection.cs" />
+    <Compile Include="Testing\PageStatus.cs" />
+    <Compile Include="Testing\Test.cs" />
+    <Compile Include="Design\TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Testing\UndoManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Design\TestElement.resx">
+      <DependentUpon>TestElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ctrlDesign\ctrlDesign.resx">
+      <DependentUpon>ctrlDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ctrlImport\ctrlImport.resx">
+      <DependentUpon>ctrlImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ctrlResults\ctrlResults.resx">
+      <DependentUpon>ctrlResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCalibrationResults.resx">
+      <DependentUpon>frmCalibrationResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChooseNumber.resx">
+      <DependentUpon>frmChooseNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditItemSet.resx">
+      <DependentUpon>frmEditItemSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImageShow.resx">
+      <DependentUpon>frmImageShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProcessing.resx">
+      <DependentUpon>frmProcessing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmScript.resx">
+      <DependentUpon>frmScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetWeights.resx">
+      <DependentUpon>frmSetWeights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PropertyViewer.resx">
+      <DependentUpon>PropertyViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\Page.resx">
+      <DependentUpon>Page.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\icons\arrow_redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

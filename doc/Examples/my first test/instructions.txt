@@ -1,0 +1,21 @@
+                           Examination of Advanced Nuclear Physics III.
+
+Please read these instructions very carefully:
+
+- Filling out:
+     - Use a dark colored marker (preferably a black one).
+     - Fill the boxes completely.
+     - Do not write anything else on the paper and do not fold it.
+    
+- Identification:     
+     - In the box that says ``Identification'' please provide your student ID.
+     - The first number (0-9) goes at A, the second at B and so on.
+    
+- The questions: 
+     - Each question has four possible answers (A to D), only one of those is correct.
+     - Fill out the corresponding box on the answer sheet in the ``Answers'' box.
+     - Following correction against guessing applies: 
+          +1 for a correct answer, -1/3 for a wrong answer. 
+          0 for a missing answer or if more than one box is checked for a question.
+
+                                                     Good luck!
